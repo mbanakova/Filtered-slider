@@ -1,0 +1,28 @@
+body {
+  @include font();
+  @include fields();
+  position: relative;
+  min-width: $mobile;
+  // max-width: $desktop;
+  margin: 0 auto;
+  font-family: $font;
+  background-color: $accent;
+  color: $white;
+  overflow-x: hidden;
+
+  @media (min-width: $desktop) {
+
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,7 @@
+.pagination{
+  display: none;
+
+  @media (max-width: $desktop) {
+    display: block;
+  }
+}

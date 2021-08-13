@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Golos";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Golos Regular"),
+    local("Golos-Regular"),
+    url("../fonts/golos-regular.woff2") format("woff2"),
+    url("../fonts/golos-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Golos";
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  src: local("Golos Medium"),
+    local("Golos-Medium"),
+    url("../fonts/golos-medium.woff2") format("woff2"),
+    url("../fonts/golos-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Golos";
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Golos Bold"),
+    local("Golos-Bold"),
+    url("../fonts/golos-bold.woff2") format("woff2"),
+    url("../fonts/golos-bold.woff") format("woff");
+}

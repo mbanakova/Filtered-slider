@@ -1,0 +1,60 @@
+@mixin font($size: 16px, $height: 19px, $weight: 400) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin ul() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin a() {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin fields() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin mobile() {
+  width: 375px;
+  margin: 0 auto;
+  padding: 0 21px 0 20px;
+}
+
+@mixin tablet() {
+  width: 768px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@mixin desktop() {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin button() {
+  @include font(16px, 24px, 700px);
+  padding: 13px 21px;
+  border: 2px solid $white;
+  font-family: $font;
+  color: $white;
+  background-color: transparent;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin pseudo() {
+  position: absolute;
+  content: "";
+}

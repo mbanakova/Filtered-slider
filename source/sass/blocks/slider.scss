@@ -1,0 +1,164 @@
+.slider {
+  margin: 44px auto 0;
+  width: 1170px;
+  position: relative;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+
+  @media (max-width: $desktop) {
+    width: 100%;
+  }
+}
+
+.slider__title {
+  @include fields();
+  @include font(36px, 53px, 700);
+  margin-bottom: 17px;
+}
+
+.slider__filter {
+  @include ul();
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: $desktop) {
+    width: 100%;
+  }
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: stretch;
+    background-color: $dark-accent;
+    padding-top: 11px;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+.slider__radio {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 0 0 6px 0;
+
+    &:last-of-type {
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.slider__radio {
+  & input {
+    @include fields();
+    appearance: none;
+
+    &:checked + label {
+      background-color: rgba($white, 0.3);
+      transition: $tr;
+
+      @media (max-width: $tablet) {
+        background-color: $filter-bg;
+
+        &::before {
+          display: block;
+        }
+      }
+    }
+  }
+
+  & label {
+    padding: 8px 20px;
+    border-radius: 8px;
+
+    &:hover{
+      background-color: rgba($white, 0.5);
+      transition: $tr;
+    }
+
+    @media (max-width: $desktop) {
+      @include font(16px, 20px, 500);
+    }
+
+    @media (max-width: $tablet) {
+      @include font(16px, 24px, 500);
+      position: relative;
+      padding: 6px 30px 9px 40px;
+      width: 100%;
+      border-radius: 0;
+      background-color: $dark-accent;
+
+      &::before {
+        @include pseudo();
+        display: none;
+        width: 10px;
+        height: 6px;
+        top: 13px;
+        left: 20px;
+        border-left: 2px solid $white;
+        border-bottom: 2px solid $white;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.slider__wrapper {
+  width: 1330px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__outer {
+  width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 30;
+  position: relative;
+  min-height: 530px;
+
+  @media (max-width: $desktop) {
+    width: 688px;
+    margin: 0;
+  }
+
+  @media (max-width: $tablet) {
+    width: 334px;
+  }
+}
+
+.slider__inner {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1770px;
+  height: 530px;
+  pointer-events: none;
+  // transition: .6s ease-in-out;
+  // background-color: yellow;
+  // z-index: -1;
+
+  @media (max-width: $desktop) {
+    grid-gap: 20px;
+  }
+
+  @media (max-width: $tablet) {
+    grid-column-gap: 18px;
+    grid-row-gap: 20px;
+  }
+}
